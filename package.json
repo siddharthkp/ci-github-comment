@@ -4,7 +4,7 @@
   "description": "Comment on pull requests from CI",
   "main": "index.js",
   "scripts": {
-    "test": "ava test"
+    "test": "ava test.js"
   },
   "repository": {
     "type": "git",
