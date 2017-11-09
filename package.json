@@ -4,7 +4,7 @@
   "description": "Comment on pull requests from CI",
   "main": "index.js",
   "scripts": {
-    "test": "ava test"
+    "test": "ava test.js -v"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "ava": "0.23.0"
   },
   "dependencies": {
-    "ci-env": "1.4.0",
+    "ci-env": "1.5.1",
     "github-comment": "1.0.1"
   }
 }
