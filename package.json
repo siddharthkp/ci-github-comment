@@ -21,7 +21,7 @@
     "ava": "0.23.0"
   },
   "dependencies": {
-    "ci-env": "1.4.0",
+    "ci-env": "1.5.1",
     "github-comment": "1.0.1"
   }
 }
