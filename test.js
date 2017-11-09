@@ -2,17 +2,21 @@ const test = require('ava')
 const axios = require('axios')
 const comment = require('./index')
 
-const { repo } = require('ci-env')
+const { repo, event } = require('ci-env')
 const token = process.env.github_token || process.env.GITHUB_TOKEN
 
-test(async t => {
-  const content = `comment ${new Date().getTime()}`
+if (event === 'pull_request') {
+  test(async t => {
+    const content = `comment ${new Date().getTime()}`
 
-  const response = await comment(content)
-  const commentId = response.data.id
+    const response = await comment(content)
+    const commentId = response.data.id
 
-  t.is(await get(commentId), content)
-})
+    t.is(await get(commentId), content)
+  })
+} else {
+  test.skip('Only works with pull requests', t => t.pass())
+}
 
 const get = id => {
   return axios({
