@@ -1,0 +1,27 @@
+{
+  "name": "ci-github-comment",
+  "version": "1.0.0",
+  "description": "Comment on pull requests from CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddharthkp/ci-github-comment.git"
+  },
+  "keywords": [],
+  "author": "siddharthkp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siddharthkp/ci-github-comment/issues"
+  },
+  "homepage": "https://github.com/siddharthkp/ci-github-comment#readme",
+  "devDependencies": {
+    "ava": "0.23.0"
+  },
+  "dependencies": {
+    "ci-env": "1.4.0",
+    "github-comment": "1.0.1"
+  }
+}
